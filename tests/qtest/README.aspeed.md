@@ -10,7 +10,7 @@ models. Run against the patched `qemu-system-arm` binary built from this tree.
 | `aspeed_gpio-test`   | ast2600-evb | GPIO register behaviour, input/output pins |
 | `aspeed_hace-test`   | ast1030-evb | HACE hash engine (SHA-256/384/512) |
 | `aspeed_i2c-slave-test`   | ast1030-evb | I²C slave-mode DMA TX (exercises the AST10x0 I²C patch series) |
-| `aspeed_i2c_server-test`  | ast1060-evb | Infrastructure for the `openprot` i2c_server qtest suite: control-scratchpad round-trip + `i2c-test-master` probe path |
+| `aspeed_i2c_server-test`  | ast1060-evb | `openprot` i2c_server qtest suite (bus 3): qtest-ctrl scratchpad + `i2c-test-master` probe, slave_config validation (addr match / dev_addr redirect / dev_addr readback / reset disarm), init-speed AC_TIMING smoke, master ACK/NACK + status clearing + LEN overflow, slave-mode DMA TX on bus 3 + over-read guard |
 | `aspeed_scu-test`    | ast2600-evb | SCU clock/reset register wiring |
 | `aspeed_smc-test`    | ast1030-evb | SMC / FMC SPI flash controller |
 
